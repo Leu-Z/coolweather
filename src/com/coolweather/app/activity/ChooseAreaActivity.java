@@ -188,7 +188,7 @@ public class ChooseAreaActivity extends Activity {
 						@Override
 						public void run(){
 							closeProgressDialog();
-							Toast.makeText(ChooseAreaActivity.this, "加载失败", Toast.LENGTH_SHORT).show();
+							Toast.makeText(ChooseAreaActivity.this, "帅哥加载失败", Toast.LENGTH_SHORT).show();
 						}
 					});
 				}
@@ -198,7 +198,7 @@ public class ChooseAreaActivity extends Activity {
 		private void showProgressDialog(){
 			if(progressDialog==null){
 				progressDialog=new ProgressDialog(this);
-				progressDialog.setMessage("帅哥正在加载。。。");
+				progressDialog.setMessage("帅哥正在拼命加载。。。");
 				progressDialog.setCanceledOnTouchOutside(false);
 			}
 			progressDialog.show();

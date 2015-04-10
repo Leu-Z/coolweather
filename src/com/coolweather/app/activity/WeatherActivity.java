@@ -52,7 +52,7 @@ public class WeatherActivity extends Activity implements OnClickListener{
 		currentDateText=(TextView)findViewById(R.id.current_date);
 		String countyCode=getIntent().getStringExtra("county_code");
 		if(!TextUtils.isEmpty(countyCode)){
-			publishText.setText("同步中。。。");
+			publishText.setText("帅哥拼命同步中。。。");
 			weatherInfoLayout.setVisibility(View.INVISIBLE);
 			cityNameText.setVisibility(View.INVISIBLE);
 			queryWeatherCode(countyCode);
@@ -75,7 +75,7 @@ public class WeatherActivity extends Activity implements OnClickListener{
 				finish();
 				break;
 			case R.id.refresh_weather:
-				publishText.setText("同步中...");
+				publishText.setText("帅哥拼命同步中...");
 				SharedPreferences prefs=PreferenceManager.getDefaultSharedPreferences(this);
 				String weatherCode=prefs.getString("weather_code", "");
 				if(!TextUtils.isEmpty(weatherCode)){
@@ -126,7 +126,7 @@ public class WeatherActivity extends Activity implements OnClickListener{
 				runOnUiThread(new Runnable(){
 					@Override
 					public void run(){
-						publishText.setText("同步失败");
+						publishText.setText("帅哥同步失败");
 					}
 				});
 			}
