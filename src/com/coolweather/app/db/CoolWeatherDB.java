@@ -94,14 +94,14 @@ public class CoolWeatherDB {
      public void saveCounty(County county){
     	 if(county!=null){
     		 ContentValues values=new ContentValues();
- 			values.put("county_name", county.getCityName());
- 			values.put("county_code", county.getCityCode());
+ 			values.put("county_name", county.getCountyName());
+ 			values.put("county_code", county.getCountyCode());
  			values.put("city_id",county.getCityId());
  			db.insert("County", null, values);
     	 }
      }
      
-     public List<County> loadcounties(int cityId){
+     public List<County> loadCounties(int cityId){
  		List<County> list=new ArrayList<County>();
  		Cursor cursor=db.query("County",null,"city_id=?",new String[]{String.valueOf(cityId)},null,null,null);
  		if(cursor.moveToFirst()){

@@ -14,7 +14,7 @@ public class County {
 		this.id=id;
 	}
 	
-	public String getCityName(){
+	public String getCountyName(){
 		return countyName;
 	}
 	
@@ -22,7 +22,7 @@ public class County {
 		this.countyName=countyName;
 	}
 	
-	public String getCityCode(){
+	public String getCountyCode(){
 		return countyCode;
 	}
 	
